@@ -4,7 +4,7 @@ mag:
   homeCommunityId: urn:oid:1.2.3.4.5
   baseurl: http://localhost
   client-ssl:
-    enabled: true
+    enabled: false
     key-store:
       path: src/main/resources/keystore.jks
       password: a1b2c3
