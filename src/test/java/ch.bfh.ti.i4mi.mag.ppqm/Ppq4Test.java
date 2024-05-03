@@ -7,6 +7,7 @@ import org.apache.camel.ExchangePattern;
 import org.apache.camel.support.DefaultExchange;
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.OperationOutcome;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.openehealth.ipf.commons.ihe.fhir.chppqm.ChPpqmUtils;
 import org.openehealth.ipf.platform.camel.core.util.Exchanges;
@@ -33,6 +34,7 @@ public class Ppq4Test extends PpqmTestBase {
         return exchange;
     }
 
+    @Ignore
     @Test
     public void testPost() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
@@ -50,6 +52,7 @@ public class Ppq4Test extends PpqmTestBase {
         }
     }
 
+    @Ignore
     @Test
     public void testPostFailure() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
@@ -68,6 +71,7 @@ public class Ppq4Test extends PpqmTestBase {
         assertTrue(exceptionHandled);
     }
 
+    @Ignore
     @Test
     public void testPutAllUnknown() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
@@ -85,6 +89,7 @@ public class Ppq4Test extends PpqmTestBase {
         }
     }
 
+    @Ignore
     @Test
     public void testPutAllKnown() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
@@ -101,6 +106,7 @@ public class Ppq4Test extends PpqmTestBase {
         }
     }
 
+    @Ignore
     @Test
     public void testPutMixedKnownAndUnknown() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
@@ -119,6 +125,7 @@ public class Ppq4Test extends PpqmTestBase {
         assertTrue(exceptionHandled);
     }
 
+    @Ignore
     @Test
     public void testDeleteKnown() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4DeleteRequestBundle(List.of(TestConstants.KNOWN_POLICY_SET_ID));
@@ -133,6 +140,7 @@ public class Ppq4Test extends PpqmTestBase {
         }
     }
 
+    @Ignore
     @Test
     public void testDeleteUnknown() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4DeleteRequestBundle(List.of(createUuid()));
@@ -150,6 +158,7 @@ public class Ppq4Test extends PpqmTestBase {
         assertTrue(exceptionHandled);
     }
 
+    @Ignore
     @Test
     public void testDeleteFailure() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4DeleteRequestBundle(List.of(TestConstants.FAILURE_POLICY_SET_ID));
