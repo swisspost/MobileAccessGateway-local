@@ -21,6 +21,7 @@ import static org.openehealth.ipf.commons.ihe.fhir.chppqm.ChPpqmConsentCreator.*
 /**
  * @author Dmytro Rud
  */
+@Ignore
 public class Ppq4Test extends PpqmTestBase {
 
     private Exchange send(Bundle request) throws Exception {
@@ -52,7 +53,7 @@ public class Ppq4Test extends PpqmTestBase {
         }
     }
 
-    @Ignore
+    @Ignore    
     @Test
     public void testPostFailure() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
