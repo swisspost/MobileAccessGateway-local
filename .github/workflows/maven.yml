@@ -32,18 +32,6 @@ jobs:
     
     - name: Generate the Jacoco report
       run: mvn jacoco:report
-
-    - name: Publish test coverage results
-      uses: PavanMudigonda/jacoco-reporter@v4.8
-      with:
-        coverage_results_path: 'target/site/jacoco/jacoco.xml'
-        coverage_report_title: 'Test coverage results'
-        coverage_report_name: 'Test coverage results'
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-
-    # Publish Coverage Job Summary  # Optional
-    - name: Add Coverage Job Summary
-      run: echo "${{ steps.jacoco_reporter.outputs.coverageSummary }}" >> $GITHUB_STEP_SUMMARY
     
     - name: Generate JaCoCo Badge
       id: jacoco
