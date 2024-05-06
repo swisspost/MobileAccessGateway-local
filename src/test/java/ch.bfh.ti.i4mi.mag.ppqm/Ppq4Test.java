@@ -21,7 +21,6 @@ import static org.openehealth.ipf.commons.ihe.fhir.chppqm.ChPpqmConsentCreator.*
 /**
  * @author Dmytro Rud
  */
-@Ignore
 public class Ppq4Test extends PpqmTestBase {
 
     private Exchange send(Bundle request) throws Exception {
@@ -35,7 +34,6 @@ public class Ppq4Test extends PpqmTestBase {
         return exchange;
     }
 
-    @Ignore
     @Test
     public void testPost() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
@@ -53,7 +51,6 @@ public class Ppq4Test extends PpqmTestBase {
         }
     }
 
-    @Ignore    
     @Test
     public void testPostFailure() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
@@ -72,7 +69,6 @@ public class Ppq4Test extends PpqmTestBase {
         assertTrue(exceptionHandled);
     }
 
-    @Ignore
     @Test
     public void testPutAllUnknown() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
@@ -90,7 +86,6 @@ public class Ppq4Test extends PpqmTestBase {
         }
     }
 
-    @Ignore
     @Test
     public void testPutAllKnown() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
@@ -107,7 +102,6 @@ public class Ppq4Test extends PpqmTestBase {
         }
     }
 
-    @Ignore
     @Test
     public void testPutMixedKnownAndUnknown() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4SubmitRequestBundle(List.of(
@@ -126,7 +120,6 @@ public class Ppq4Test extends PpqmTestBase {
         assertTrue(exceptionHandled);
     }
 
-    @Ignore
     @Test
     public void testDeleteKnown() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4DeleteRequestBundle(List.of(TestConstants.KNOWN_POLICY_SET_ID));
@@ -141,7 +134,6 @@ public class Ppq4Test extends PpqmTestBase {
         }
     }
 
-    @Ignore
     @Test
     public void testDeleteUnknown() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4DeleteRequestBundle(List.of(createUuid()));
@@ -159,7 +151,6 @@ public class Ppq4Test extends PpqmTestBase {
         assertTrue(exceptionHandled);
     }
 
-    @Ignore
     @Test
     public void testDeleteFailure() throws Exception {
         Bundle requestBundle = ChPpqmUtils.createPpq4DeleteRequestBundle(List.of(TestConstants.FAILURE_POLICY_SET_ID));
@@ -176,5 +167,4 @@ public class Ppq4Test extends PpqmTestBase {
         }
         assertTrue(exceptionHandled);
     }
-
 }
