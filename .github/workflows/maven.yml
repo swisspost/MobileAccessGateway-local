@@ -41,6 +41,10 @@ jobs:
         coverage_report_name: 'Test coverage results'
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
+    # Publish Coverage Job Summary  # Optional
+    - name: Add Coverage Job Summary
+      run: echo "${{ steps.jacoco_reporter.outputs.coverageSummary }}" >> $GITHUB_STEP_SUMMARY      
+
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
       uses: advanced-security/maven-dependency-submission-action@v3
