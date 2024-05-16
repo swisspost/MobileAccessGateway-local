@@ -7,6 +7,7 @@ import org.apache.camel.ExchangePattern;
 import org.apache.camel.support.DefaultExchange;
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.OperationOutcome;
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.openehealth.ipf.commons.ihe.fhir.chppqm.ChPpqmUtils;
 import org.openehealth.ipf.platform.camel.core.util.Exchanges;
@@ -166,5 +167,4 @@ public class Ppq4Test extends PpqmTestBase {
         }
         assertTrue(exceptionHandled);
     }
-
 }
