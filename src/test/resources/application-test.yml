@@ -4,7 +4,7 @@ mag:
   homeCommunityId: urn:oid:1.2.3.4.5
   baseurl: http://localhost
   client-ssl:
-    enabled: false
+    enabled: true
     key-store:
       path: src/main/resources/keystore.jks
       password: a1b2c3
@@ -13,7 +13,7 @@ mag:
       password: a1b2c3
     cert-alias: gateway
   xds:
-    https: false
+    https: true
     iti-18:
       url: ehealthsuisse.ihe-europe.net:10443/xdstools7/sim/default__ahdis/reg/sq
     iti-43:
@@ -26,7 +26,7 @@ mag:
       url: http://localhost:9090/camel/xdsretrieve
       repositoryUniqueId: 1.1.4567332.1.2
   pix:
-    https: false
+    https: true
     iti-45:
       url: ehealthsuisse.ihe-europe.net:10443/PAMSimulator-ejb/PIXManager_Service/PIXManager_PortType
     iti-44:
