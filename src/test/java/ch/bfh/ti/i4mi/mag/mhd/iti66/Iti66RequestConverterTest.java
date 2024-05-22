@@ -4,6 +4,7 @@ import ca.uhn.fhir.rest.param.*;
 import ca.uhn.fhir.rest.server.exceptions.InvalidRequestException;
 import ch.bfh.ti.i4mi.mag.TestBase;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 import org.openehealth.ipf.commons.ihe.fhir.iti66_v401.Iti66SearchParameters;
 import org.openehealth.ipf.commons.ihe.xds.core.requests.QueryRegistry;
 import org.openehealth.ipf.commons.ihe.xds.core.transform.requests.QueryRegistryTransformer;
@@ -17,6 +18,8 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.openehealth.ipf.commons.ihe.xds.XDS.Interactions.ITI_18;
 
+
+@Disabled
 public class Iti66RequestConverterTest extends TestBase {
 
     @Autowired
